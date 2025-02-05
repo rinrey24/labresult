@@ -42,7 +42,9 @@ export default function Index({auth,users}) {
                                             <td className="px-3 py-2">{user.role}</td>
                                             <td className="px-3 py-2">{user.created_at}</td>
                                             <td className="px-3 py-2">{user.updated_at}</td>
-                                            <td className="px-3 py-2"><Link href={route('user.edit',user.id)} className="font-medium text-blue-600">Edit</Link></td>
+                                            <td className="px-3 py-2">
+                                                {/* <Link href={route('user.edit',user.id)} className="font-medium text-blue-600">Edit</Link> */}
+                                                </td>
                                         </tr>
                                     ))}
                                 </tbody>
