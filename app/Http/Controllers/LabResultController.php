@@ -185,7 +185,8 @@ class LabResultController extends Controller
               $pdf->Cell(10,5,'','T',0);
               $pdf->Cell(25,5,'Name','T',0);
               $pdf->Cell(2,5,':','T',0);
-              $pdf->CellFitScale(60,5,$data->patientname,'T',0);
+            //   $pdf->CellFitScale(60,5,$data->patientname,'T',0);
+            $pdf->Cell(60,5,$data->patientname,'T',0);
               //(right)
               $pdf->Cell(25,5,'Request No.','T',0);
               $pdf->Cell(2,5,':','T',0);
@@ -195,7 +196,8 @@ class LabResultController extends Controller
               $pdf->Cell(10,5,'',$b,0);
               $pdf->Cell(25,5,'Patient ID',$b,0);
               $pdf->Cell(2,5,':',$b,0);
-              $pdf->CellFitScale(60,5,$data->patientid,$b,0);
+            //   $pdf->CellFitScale(60,5,$data->patientid,$b,0);
+            $pdf->Cell(60,5,$data->patientid,$b,0);
               //(right)
               $pdf->Cell(25,5,'Date Of Birth',$b,0);
               $pdf->Cell(2,5,':',$b,0);
@@ -256,9 +258,12 @@ class LabResultController extends Controller
 
         //result
         $pdf->Cell(10,5,'',0,0);
-        $pdf->CellFitScale(80,5,$data->testname,0,0);
-        $pdf->CellFitScale(47,5,$data->result,0,0);
-        $pdf->CellFitScale(0,5,$data->reference,0,0);
+        // $pdf->CellFitScale(80,5,$data->testname,0,0);
+        $pdf->Cell(80,5,$data->testname,0,0);
+        // $pdf->CellFitScale(47,5,$data->result,0,0);
+        $pdf->Cell(47,5,$data->result,0,0);
+        // $pdf->CellFitScale(0,5,$data->reference,0,0);
+        $pdf->Cell(0,5,$data->reference,0,0);
         
 
         // $filename = 'HasilLab.pdf';
